@@ -79,8 +79,8 @@ def generate_pdf_report(profiles, metrics, best_algo):
         pdf.set_font("helvetica", "", 10)
         pdf.cell(0, 6, "Estrategias de Retención:", new_x="LMARGIN", new_y="NEXT")
         for idx, strategy in enumerate(p['strategies'], 1):
-            pdf.cell(10) # indent
-            pdf.multi_cell(0, 6, f"{idx}. {strategy}")
+            pdf.set_x(pdf.l_margin + 10)
+            pdf.multi_cell(pdf.epw - 10, 6, f"{idx}. {strategy}")
             
         pdf.ln(5)
         

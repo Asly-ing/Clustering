@@ -6,21 +6,32 @@ Bienvenido al manual de uso del aplicativo **SER**. Esta guía te explicará pas
 
 ## Parte 1: Iniciar la Aplicación
 
+Para iniciar la aplicación correctamente utilizando el entorno virtual del proyecto y evitar problemas de dependencias, sigue estos sencillos pasos:
+
 1. **Abrir la Terminal:**
-   Abre tu terminal de comandos (Símbolo del sistema, PowerShell o la terminal integrada de tu editor de código como VS Code).
+   Abre tu terminal de comandos (PowerShell, Símbolo del Sistema / CMD, o la terminal integrada de VS Code).
 
 2. **Navegar a la Carpeta del Proyecto:**
-   Asegúrate de estar en la carpeta donde está el código del proyecto.
+   Asegúrate de estar en el directorio del proyecto ejecutando el siguiente comando:
    ```bash
    cd "C:\Users\Asly Acuña\Documents\Clustering"
    ```
 
-3. **Ejecutar el Servidor:**
-   Escribe el siguiente comando y presiona Enter:
+3. **Ejecutar el Servidor desde el Entorno Virtual:**
+   Para ejecutar el proyecto con todas sus librerías instaladas, inicia Streamlit directamente a través del Python de tu entorno virtual (`.venv`):
    ```bash
-   python -m streamlit run app.py
+   .venv\Scripts\python -m streamlit run app.py
    ```
-   *Nota: Se abrirá automáticamente una pestaña en tu navegador web. Si no lo hace, abre tu navegador y entra a `http://localhost:8501`.*
+   
+   *(Opcional) Si prefieres activar el entorno virtual antes de ejecutarlo, puedes hacerlo con:*
+   ```bash
+   .venv\Scripts\activate
+   streamlit run app.py
+   ```
+
+4. **Acceder en el Navegador:**
+   Se abrirá automáticamente una pestaña en tu navegador web. Si no lo hace, abre tu navegador e ingresa a:
+   **[http://localhost:8501](http://localhost:8501)**
 
 ---
 

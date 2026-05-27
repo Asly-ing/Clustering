@@ -18,7 +18,7 @@ def preprocess_data(df, selected_vars, norm_technique, null_strategy):
     # 2. Label Encoding for categorical variables
     encoders = {}
     for col in df_processed.columns:
-        if df_processed[col].dtype == 'object' or df_processed[col].dtype.name == 'category':
+        if not pd.api.types.is_numeric_dtype(df_processed[col]):
             le = LabelEncoder()
             df_processed[col] = le.fit_transform(df_processed[col].astype(str))
             encoders[col] = le
